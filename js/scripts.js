@@ -21,12 +21,12 @@ function Triangle(side1, side2, side3) {
 Triangle.prototype.checkSides = function(a, b, c) {
   if (a === b && b === c) {
     alert("Equilateral!");
-  // } else if () {
-  //   alert("Isosceles");
-  // } else if () {
-  //   alert("Scalene!");
-  // } else {
-  //   alert("Try again");
+  } else if (a !== b && b !== c && a !== c) {
+    alert("Scalene");
+  } else if (a+b < c || c+b < a || a+c < b) {
+    alert("Try again");
+  } else {
+    alert("Isosceles");
   }
 }
 
